@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+ @Html.Partial("Partials/_MainContent", new ViewDataDictionary()
+ {
+     {"CategoryName", "Туристи з дітьми" }, {"ChartSafetyData", ViewBag.ChartSafetyData}, { "ChartComfortData", ViewBag.ChartComfortData }, { "ChartInformativeData", ViewBag.ChartInformativeData }, { "ChartStaffQualificationData", ViewBag.ChartStaffQualificationData },
+     { "GetSafeties", "GetChildSafeties" }, { "GetComforts", "GetChildComforts" }, { "GetInformative", "GetChildInformative" }, { "GetStaffQualification", "GetChildStaffQualification" },
+ })

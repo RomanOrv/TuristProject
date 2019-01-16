@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "OldAge";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("Partials/_MainContent", new ViewDataDictionary()
+{
+    {"CategoryName", "Третій вік" }, {"ChartSafetyData", ViewBag.ChartSafetyData}, { "ChartComfortData", ViewBag.ChartComfortData }, { "ChartInformativeData", ViewBag.ChartInformativeData }, { "ChartStaffQualificationData", ViewBag.ChartStaffQualificationData },
+    { "GetSafeties", "GetOldAgeSafeties" }, { "GetComforts", "GetOldAgeComforts" }, { "GetInformative", "GetOldAgeInformative" }, { "GetStaffQualification", "GetOldAgeStaffQualification" },
+})
+
+
