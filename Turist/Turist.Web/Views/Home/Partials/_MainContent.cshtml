@@ -10,6 +10,10 @@
     .m-l-15 {
         margin-left: 15px;
     }
+
+    .title-bellow{
+        height: 2em;
+    }
 </style>
 
 <div class="panel-body">
@@ -24,8 +28,8 @@
                 .Name("Safety")
                 .Columns(columns =>
                 {
-                    columns.Bound(p => p.CompanyNumber).Title("Номер<br/> туристичної<br/> організації"); //.Width(110);
-                columns.Bound(p => p.ResidenceCoefficient).Title("Коефіцієнт<br/> проживання"); //.Width(120);
+                    columns.Bound(p => p.CompanyNumber).Title("Номер<br/> туристичної<br/> організації");
+                columns.Bound(p => p.ResidenceCoefficient).Title("Коефіцієнт<br/> проживання");
                 columns.Bound(p => p.FoodCoefficient).Title("Коефіцієнт<br/> харчування");
                     columns.Bound(p => p.TransportationCoefficient).Title("Коефіцієнт<br/> транспортних<br/> послуг");
                     columns.Bound(p => p.ExcursionCoefficient).Title("Коефіцієнт<br/> екскурсійних<br/> послуг");
@@ -184,7 +188,7 @@
 
     <div class="col-md-6">
         <div class="row">
-            <h2>Вагові коефіцієнти за характеристикою "Інформативність"</h2>
+            <h2 class="title-bellow">Вагові коефіцієнти за характеристикою "Інформативність"</h2>
             @(Html.Kendo().Grid<GridModel>()
                 .Name("Informative")
                 .Columns(columns =>
@@ -234,9 +238,9 @@
                                 series: chartsData,
                                 categoryAxis: {
                                     categories: [
-                                        "Середньостатистичний показник безпеки", "Безпека харчування",
-                                        "Безпека транспортних послуг",
-                                        "Безпека екскурсійних послуг", "Безпека проживання"
+                                        "Середньостатистичний показник інформативності", "Інформативність харчування",
+                                        "Інформативність транспортних послуг",
+                                        "Інформативність екскурсійних послуг", "Інформативність проживання"
                                     ]
                                 },
                                 valueAxis: {
@@ -264,7 +268,7 @@
     </div>
     <div class="col-md-6">
         <div class="row">
-            <h2 class="m-l-15">Вагові коефіцієнти за характеристикою "Кваліфікованість персоналу"</h2>
+            <h2 class="m-l-15 title-bellow">Вагові коефіцієнти за характеристикою "Кваліфікованість персоналу"</h2>
             @(Html.Kendo().Grid<GridModel>()
                 .Name("StaffQualification")
                 .Columns(columns =>
@@ -314,9 +318,9 @@
                             series: chartsData,
                             categoryAxis: {
                                 categories: [
-                                    "Середньостатистичний показник комфорту", "Комфорт харчування",
-                                    "Комфорт транспортних послуг",
-                                    "Комфорт екскурсійних послуг", "Комфорт проживання"
+                                    "Середньостатистичний показник кваліфікації персоналу", "Послуги в галузі харчування",
+                                    "Послуги транспортних перевезень",
+                                    "Послуги екскурсійних виїздів", "Послуги в галузі проживання"
                                 ]
                             },
                             valueAxis: {
